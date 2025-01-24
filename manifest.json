@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Roblox cookie Manager",
+    "version": "1.0.1",
+    "description": "Just an extension to make login with cookies more easy.",
+   
+    "action": {
+      "default_popup": "index.html"
+    },
+    "host_permissions": [
+      "https://www.roblox.com/*",
+      "https://web.roblox.com/*"
+    ],
+    "permissions": [
+      "cookies",
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "background": {}
+  }
+  
