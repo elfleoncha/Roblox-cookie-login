@@ -5,7 +5,9 @@
     "description": "Just an extension to make login with cookies more easy.",
    
     "action": {
-      "default_popup": "index.html"
+      "default_popup": "index.html",
+      "default_icon": "COOKIE MANAGER ROBLOX/LOGO.png",
+      "type": "module"
     },
     "host_permissions": [
       "https://www.roblox.com/*",

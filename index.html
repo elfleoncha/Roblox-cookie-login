@@ -1,107 +1,173 @@
 <html>
- <head>
-   <title>Roblox cookie Manager</title>
- </head>
+<head>
+  <title>Roblox Cookie Manager</title>
   <style>
     body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 250px;
-    width: 400px;
-    background-image: url(LOGO.png) ;
-    background-size: fill;
-  }
-    .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 350px;
+      width: 400px;
+      background-color: #000000;
+      text-align: center;
     }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 3px;
+    }
+
+    .title {
+      color: white;
+      font-family: Segoe UI;
+      font-size: 32px;
+    }
+
+    .img {
+      width: 80px;
+    }
+
+    .cookie-input {
+      background-color: #ffffff;
+      border: none;
+      color: rgb(0, 0, 0);
+      padding: 15px 32px;
+      text-align: center;
+      display: flex;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 9px;
+      width: 330px;
+      height: 40px;
+      font-weight: bold;
+      transition: all;
+      transition-duration: 200ms;
+      outline: none;
+    }
+
+    .cookie-input::placeholder {
+      color: #000000;
+      font-family: Segoe UI;
+    }
+
     .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 12px 20px;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    outline: none;
-    color: #000000;
-    border: none;
-    margin-top: 10px;
-    background-color: #ffffff;
-  border-radius: 12px;
-  width: 130px;
-  height: 42px;
-  transition: all;
-  transition-duration: 200ms;
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      outline: none;
+      color: #000000;
+      border: none;
+      margin-top: 10px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      width: 130px;
+      height: 42px;
+      transition: all;
+      transition-duration: 200ms;
+    }
 
-.button:hover {background-color: #383838}
+    .button:hover {
+      background-color: #383838;
+      color: white;
+    }
 
-.button:active {
-  background-color: #000000;
-  color: white;
-  transform: translateY(4px);
-}
-.cookie-input {
-  background-color: #ffffff;
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 15px 32px;
-  text-align: center;
-  display: flex;
-  font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 9px;
-  width: 330px;
-  height: 40px;
-  font-weight: bold;
-  transition: all;
-  transition-duration: 300ms;
-  outline: none;
-}
+    .button:active {
+      background-color: #000000;
+      color: white;
+      transform: translateY(4px);
+    }
 
-.cookie-input::placeholder {
-  color: #000000;
-  font-family: Segoe UI;
-}
-.error {
-  font-size: 15px;
-  font-weight: 600;
-  display: none;
-  color: red;
-}
-.shown {
-  display: flex !important;
-  position: relative;
-  top: -15px;
-}
-.errored {
-  border: 2px solid hsl(0, 100%, 50%);
-}
-.input-error {
-  display:flex;
-  justify-content: start;
-  align-items: start;
-  flex-direction: column;
-}
- </style>
- <body>
-   <div class="container">
-     <div class="input-error">
-      <input class="cookie-input"  placeholder="Cookie..."  type="text"/>
+
+    .error {
+      font-size: 20px;
+      font-weight: 700;
+      display: none;
+      color: red;
+    }
+
+    .shown {
+      display: flex !important;
+      position: relative;
+      top: -15;
+    }
+
+    .errored {
+      border: 2px solid hsl(0, 100%, 50%);
+    }
+
+    .input-error {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-direction: column;
+    }
+
+    .social {
+      padding: 10px 10px;
+      border: none;
+      border-radius: 10px;
+      display: flex;
+      margin-top: 10px;
+      width: 130px;
+      justify-content: center;
+      background-color: #ffffff;
+      transition: background-color 200ms ease, transform 100ms ease;
+    }
+
+    .social:hover {
+      background-color: #383838;
+    }
+
+    .social:active {
+      background-color: #000000;
+      transform: translateY(4px);
+    }
+    .social:hover .button-interior,
+    .social:active .button-interior {
+      color: white;
+    }
+
+    .button-interior {
+      text-decoration: none;
+      color: black;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="input-error">
+      <div class="header">
+        <img class="img" src="https://static.vecteezy.com/system/resources/previews/035/565/765/non_2x/ai-generated-chocolate-cookies-isolated-on-transparent-background-free-png.png" />
+        <h1 class="title">Cookie Manager</h1>
+      </div>
+      <input class="cookie-input" placeholder="Cookie..." type="text" />
       <p class="error"></p>
-     </div>
-    <button class="button">Put Cookie</button> 
     </div>
-    <script src="app.js" type="module"></script>
- </body>
+    <button class="button">Put Cookie</button>
+    <button class="social" ><a target="_blank" href="https://github.com/elfleoncha" class="button-interior">Github</a></button>
+    <img src="LOGO.png"  width="50px" alt="my logo 😭">
+  <script src="app.js" type="module"></script>
+</body>
 </html>
