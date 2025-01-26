@@ -13,9 +13,10 @@
 3. Upload the folder in the unpacked mode
 
 
-#😁New features😁
-Interface updated and new database sistem to improve the performance 
-Thease is my first oficial proyect pls give me stars if you like how it works.
+# 😁New features😁
+**Interface updated** and new **database** sistem to improve the performance 
+
+Thease is my first oficial proyect pls give me **stars** if you like how it works.
 
 
 ![Face roblox](Bruh.jpg)
