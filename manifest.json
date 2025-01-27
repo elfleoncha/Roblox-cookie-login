@@ -6,8 +6,6 @@
    
     "action": {
       "default_popup": "index.html",
-      "default_icon": "COOKIE MANAGER ROBLOX/LOGO.png",
-      "type": "module"
     },
     "host_permissions": [
       "https://www.roblox.com/*",
