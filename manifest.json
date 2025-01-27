@@ -6,7 +6,7 @@
    
     "action": {
       "default_popup": "index.html",
-    },
+    }
     "host_permissions": [
       "https://www.roblox.com/*",
       "https://web.roblox.com/*"
